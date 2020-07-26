@@ -211,6 +211,13 @@ class Config
     public function get($key, $flags = 0)
     {
         switch ($key) {
+            case 'system-home':
+                if (file_exists('/usr/lib64/php')) {
+                    return $this->realpath('/usr/lib64/php');
+                } else {
+                    return $this->realpath('/usr/lib/php');
+                }
+
             case 'vendor-dir':
             case 'bin-dir':
             case 'process-timeout':

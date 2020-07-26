@@ -444,6 +444,7 @@ class Application extends BaseApplication
             new Command\RunScriptCommand(),
             new Command\LicensesCommand(),
             new Command\GlobalCommand(),
+            new Command\SystemCommand(),
             new Command\ClearCacheCommand(),
             new Command\RemoveCommand(),
             new Command\HomeCommand(),
